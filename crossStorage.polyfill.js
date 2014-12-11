@@ -80,6 +80,7 @@ window.crossStorage = (function (defaultSessionStorage) {
             },
             removeItem: function (key) {
                 delete _data[key];
+                _save();
             },
             key: function (index) {
                 return _data[index] || null;
