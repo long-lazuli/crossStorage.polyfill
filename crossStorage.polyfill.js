@@ -36,10 +36,10 @@ window.crossStorage = (function (defaultSessionStorage) {
     }
 
     var getValidStorage = function () {
-        var testKey = 'test', storage = window.sessionStorage;
+        var testKey = 'test';
         try {
-            storage.setItem(testKey, '1');
-            storage.removeItem(testKey);
+            defaultSessionStorage.setItem(testKey, '1');
+            defaultSessionStorage.removeItem(testKey);
 
             return defaultSessionStorage;
         }
